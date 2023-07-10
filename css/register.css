@@ -1,0 +1,150 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    height: 85px;
+    border-bottom: 2px solid #c81623;
+}
+
+.logo {
+    /* 给logo盒子添加margin-top会引起外边距塌陷，改为padding */
+    padding-top: 15px;
+}
+
+.registerarea {
+    height: 521px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.registerarea h3 {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+.login {
+    /* 疑问：不环绕？解答：下面标准流的文字环绕 */
+    float: right;
+    /* font-size属性不被直接继承：只有计算值(em或百分比时)被继承 */
+    font-size: 14px;
+}
+
+.login a {
+    color: #c81623;
+}
+
+.reg_form {
+    width: 600px;
+    height: 400px;
+    margin: 50px auto 0;
+    /* background-color: pink; */
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.reg_form ul li label {
+    /* 给label一个宽度，设置文字右对齐 */
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+/* 给input设置统一的类名inp，否则会影响下面的协议勾选框和提交框 */
+.reg_form ul li .inp {
+    width: 240px;
+    height: 35px;
+    border: 1px solid #ccc;
+}
+
+.error {
+    color: #c81623;
+}
+
+.error_icon,
+.success_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png);
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.success {
+    color: green;
+}
+
+.success_icon {
+    background: url(../images/success.png);
+}
+
+.safe {
+    margin-left: 171px;
+}
+
+.safe em {
+    padding: 0 12px;
+    color: #fff;
+    /* background-color: pink; */
+}
+
+.ruo {
+    background-color: #c81623;
+}
+
+.zhong {
+    background-color: #40b83f;
+}
+
+.qiang {
+    background-color: #f79100;
+}
+
+.agree {
+    /* 整体右移，不用margin影响li */
+    padding-left: 95px;
+}
+
+.agree input {
+    /* 让文字和图片或者表单元素（二者均为行内块）对齐 */
+    vertical-align: middle;
+}
+
+.agree a {
+    color: #a1d0f2;
+}
+
+.btn {
+    width: 200px;
+    height: 35px;
+    background-color: #c81623;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+    margin: 30px 0 0 100px;
+}
+
+.mod_copyright {
+    margin-top: 40px;
+    padding-top: 20px;
+    /* height: 117px; 不必设置高度*/
+    text-align: center;
+}
+
+.links {
+    margin-bottom: 13px;
+}
+
+.copyright {
+    line-height: 20px;
+}

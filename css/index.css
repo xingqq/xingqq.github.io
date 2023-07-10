@@ -1,0 +1,248 @@
+.main {
+    width: 980px;
+    height: 455px;
+    /* 没有加版心时，是距离屏幕左侧220px，缩放main会移动 */
+    margin-left: 220px;
+    /* background-color: pink; */
+    margin-top: 10px;
+}
+
+.focus {
+    float: left;
+    width: 720px;
+    height: 455px;
+    /* background-color: purple; */
+}
+
+.newsflash {
+    float: right;
+    width: 251px;
+    height: 455px;
+    border: 1px solid #e4e4e4;
+}
+
+.news {
+    height: 165px;
+    /* background-color: pink; */
+}
+
+.news_hd {
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px dotted #ccc;
+    padding: 0 15px;
+}
+
+.news_hd h3 {
+    float: left;
+}
+
+.more {
+    float: right;
+    /* margin-right: 30px; */
+}
+
+.news_hd a::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news_bd {
+    padding: 5px 16px 0;
+}
+
+.news_bd ul li {
+    height: 23px;
+    line-height: 23px;
+    /* 单行文本多出省略123 */
+    /*1. 先强制一行内显示文本,nowrap禁止自动换行*/
+    white-space: nowrap;
+    /*2. 超出的部分隐藏*/
+    overflow: hidden;
+    /*3. 文字用省略号替代超出的部分*/
+    text-overflow: ellipsis;
+}
+
+.lifeservice {
+    height: 210px;
+    /* background-color: skyblue; */
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    /* 将每行第四个li超出的部分隐藏 */
+    overflow: hidden;
+}
+
+.lifeservice ul {
+    /* 让每一行的第四个li上去 */
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    /* 转换为行内块可以水平居中 */
+    display: inline-block;
+    background-color: pink;
+    width: 21px;
+    height: 26px;
+    margin-top: 13px;
+    background: url(../images/icons.png) no-repeat -17px -15px;
+}
+
+.bargin {
+    margin-top: 5px;
+    /* 图片左侧为什么有缝隙 */
+    background-color: red;
+}
+
+.recom {
+    height: 163px;
+    margin-top: 12px;
+    background-color: pink;
+}
+
+.recom_hd {
+    float: left;
+    width: 207px;
+    height: 163px;
+    background-color: #5c5251;
+    /* img是行内块，可以用text-align使其水平居中，padding-top竖直居中 */
+    text-align: center;
+    padding-top: 30px;
+}
+
+.recom_bd {
+    float: left;
+}
+
+.recom_bd {
+    width: 993px;
+    height: 163px;
+    background-color: #ebebeb;
+    /* background-color: pink; */
+}
+
+.recom_bd ul {
+    /* 让第二行的li上来 */
+    width: 997px;
+}
+
+.recom_bd ul li {
+    float: left;
+    position: relative;
+}
+
+/* 保证之后上传的图片都调整到相同大小 */
+.recom_bd ul li a img {
+    width: 249px;
+    height: 163px;
+}
+
+.recom_bd ul li:nth-child(-n+3)::after {
+    /* ::after是行内元素，转换为行内块 */
+    /* 同时又要调整位置，所以用定位 */
+    /* after一定要加content */
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 1px;
+    height: 143px;
+    background-color: #dddddd;
+}
+
+.box_hd {
+    height: 30px;
+    /* background-color: pink; */
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+}
+
+.box_hd .tab_list {
+    float: right;
+    line-height: 30px;
+}
+
+.box_hd .tab_list ul li {
+    float: left;
+}
+
+.box_hd .tab_list ul li a {
+    padding: 0 15px;
+    /* margin: 0 15px; 用padding会使鼠标经过周围也能选中*/
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+
+.tab_list_item {
+    height: 360px;
+    /* background-color: pink; */
+}
+
+.tab_list_item>div {
+    /* 只让亲儿子div浮动，避免孙子重孙div也浮动 */
+    float: left;
+}
+
+.col_209 {
+    width: 209px;
+    height: 360px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.col_209 ul {
+    padding-left: 12px;
+    /* ul的孩子浮动，height为0加margin-bottom不起作用 */
+    /* margin-bottom: 25px; */
+}
+
+.col_209 img {
+    margin-top: 25px;
+}
+
+.col_209 ul li {
+    float: left;
+    width: 85px;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    border-bottom: 1px solid #ededed;
+    margin-right: 10px;
+}
+
+.col_329 {
+    width: 329px;
+}
+
+.col_221 {
+    width: 221px;
+    /* 设置border-right时，采用了css3盒子模型，不会撑大盒子； */
+    /* 但是图片宽度刚好和父亲一样时，border不能显示，设置border的话父盒子要比图大1px */
+    border-right: 1px solid #ccc;
+}
+
+.col_220 {
+    width: 220px;
+}
+
+.bb {
+    /* 一般情况下，a如果包含有宽度的盒子，要转换成块级元素，这样安全 */
+    /* 未转换情况下，border-bottom未显示 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}

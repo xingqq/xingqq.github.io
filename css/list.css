@@ -1,0 +1,80 @@
+/* 巧妙的是，给div.sk定位，然后再用padding-left和图片分开，不必设置宽高 */
+.sk {
+    position: absolute;
+    left: 185px;
+    top: 38px;
+    border-left: 1px solid #c81523;
+    padding-left: 13px;
+}
+
+.nav {
+    /* .sk_bd第一个盒子里的123跑到右边，受上面盒子影响 */
+    /* 上面的行高超过父盒子，且最后一个元素浮动，文字环绕跑到右边，用父盒子切掉 */
+    overflow: hidden;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    /* 否则行高只能使其居中，不能将行高转换为自己的高度 */
+    display: block;
+    /* 给li行高使其居中 */
+    line-height: 45px;
+    font-size: 16px;
+    padding: 0 28px;
+    font-weight: 700;
+    color: #000;
+}
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: block;
+    /* 左右两边文字底部对齐，右边偏上了，让行高大于高，使内容偏下 */
+    line-height: 48px;
+    font-size: 14px;
+    padding: 0 23px;
+}
+
+.sk_con ul li:last-child a::after {
+    font-family: 'icomoon';
+    content: '\e91e';
+}
+
+.sk_bd {
+    overflow: hidden;
+    /* 一开始为什么不显示背景，子元素浮动，且父元素没有高，高为0 */
+    /* background-color: green; */
+}
+
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    /* 没有加宽高时,明明有剩余宽度，但第四个上不去，为什么？？加上宽高才正常 */
+    width: 290px;
+    height: 458px;
+    margin-right: 13px;
+    margin-top: 15px;
+    /* 鼠标不经过时也设置边框但不显示，防止抖动 */
+    border: 1px solid transparent;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c81523;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
